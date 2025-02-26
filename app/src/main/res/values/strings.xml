@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name" translatable="false">Calculator</string>
+    <string name="example" translatable="false">10 + 5 = ?</string>
+    <string name="answer" translatable="false">Answer</string>
+    <string name="button_answer">Answer</string>
+    <string name="input_answer">input answer:</string>
+    <string name="answer_incorrect">Sorry, the answer is incorrect!</string>
+    <string name="answer_correct">You are right!</string>
+</resources>
