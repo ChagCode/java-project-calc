@@ -12,6 +12,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -29,14 +31,24 @@ public class MainActivity extends AppCompatActivity {
         Button buttonAnswer = findViewById(R.id.buttonAnswer);
         TextView textViewIncorrect = findViewById(R.id.textViewIncorrct);
         TextView textViewCorrect = findViewById(R.id.textViewCorrct);
+        TextView textViewRandomNumb1 = findViewById(R.id.textViewRandomNumb1);
+        TextView textViewRandomNumb2 = findViewById(R.id.textViewRandomNumb2);
 
-        // добавляем слушатель клика
+        Random random = new Random();
+        int randomNumber1 = random.nextInt(51);  // вернёт случайное число от 0 до 50
+        int randomNumber2 = random.nextInt(51);  // вернёт случайное число от 0 до 50
+        int sumNumbers = randomNumber1 + randomNumber2;
+        // Вывод на экран случайных чисел
+        textViewRandomNumb1.setText("" + randomNumber1);
+        textViewRandomNumb2.setText("" + randomNumber2);
+
+         // добавляем слушатель клика
         buttonAnswer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String textAnswer = editTextAnswer.getText().toString();
                 int numbAnswer = Integer.parseInt(textAnswer);
-                if (numbAnswer == 15) {
+                if (numbAnswer == sumNumbers) {
                     textViewIncorrect.setVisibility(View.GONE);
                     textViewCorrect.setVisibility(View.VISIBLE);
                 } else {
@@ -45,5 +57,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+
+
+
+
+
+
+
+
     }
 }

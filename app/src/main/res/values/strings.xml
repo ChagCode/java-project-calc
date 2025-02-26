@@ -6,4 +6,8 @@
     <string name="input_answer">input answer:</string>
     <string name="answer_incorrect">Sorry, the answer is incorrect!</string>
     <string name="answer_correct">You are right!</string>
+    <string name="randomnumb1">RandomNumb1</string>
+    <string name="randomnumb2">RandomNumb2</string>
+    <string name="sumnumbers">+</string>
+    <string name="textAnswer">= ?</string>
 </resources>
